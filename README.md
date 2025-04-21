@@ -16,13 +16,13 @@ FlippyFlappingTheJ runs on <a href="https://www.python.org/downloads/release/pyt
 * Pillow >= 11
 
 ## Quick Start<a name="Quick_Start"></a>
-Download the repo and set up a Python virtual environment in the FlippyFlappingTheJ folder.\n
+Download the repo and set up a Python virtual environment in the FlippyFlappingTheJ folder.  
     `python -m venv <path to FlippyFlappingTheJ folder>`
 
-Activate the Virtual Environment\n
+Activate the Virtual Environment  
     `.venv\Scripts\activate`
 
-Install the requirements\n
+Install the requirements  
     e.g. `python -m pip install pillow>=11`
 
 Run the Start.py script to start
