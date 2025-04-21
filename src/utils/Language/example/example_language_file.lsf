@@ -1,0 +1,15 @@
+
+alphabet := "abc"
+
+language := {
+    {a}*
+    AND
+    {{a} OR {b}}*
+    AND
+    {aaac}
+    OR
+    {cccc}
+}
+
+// creates a language file with the alphabet "abc" that accepts strings
+// like aababaaaac, cccc, aaac, bbaaac, and so on

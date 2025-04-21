@@ -1,0 +1,29 @@
+alphabet := "ab"
+
+language := {
+    {a}
+    AND
+    {ab}*
+    AND
+    {b}
+
+    {aaa}
+    AND
+    {bbb}
+    OR
+    {a}
+    AND
+    {b}
+    OR
+    {a}*
+    AND
+    {ab}*
+    AND
+    {aaa}
+
+    {a}*
+    AND
+    {{a} OR {b}}*
+    AND
+    {aaa}
+}

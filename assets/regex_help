@@ -1,0 +1,27 @@
+This is the Regular Expression help screen.
+Regular expression cnf can be saved and loaded in as both a file (.lsf) and inputted directly into the editor via the "Generate DFA by Regular Expression..." button.
+
+Comments in the file can be given by prefix '//' at the beginning of a line only.
+e.g. '// this is a comment'
+
+An alphabet must be defined for any given regular expression and is given by the prefix 'alphabet := ' followed by a string containing each unique character in the alphabet enclosed in double quotes.
+e.g. 'alphabet := "abcd"' (defines an alphabet of chars a,b,c,d)
+
+A single language can be defined in each file and is indicated with the prefix 'language := ' followed by curley braces enclosing the regular expression for the language. Within the curley braces the regular expression is defined with the following on every new line:
+    - {characters of the alphabet}
+        Defining a discreet set of characters from the alphabet.
+
+    - {characters of the alphabet}*
+        Defining discreet set of characters from the alphabet that can be repeated between 0 and inf times.
+
+    - {characters of the alphabet OR characters of the alphabet}
+        Defining two discreet set of characters from the alphabet that can be chosen from (either one OR the other).
+
+    - {characters of the alphabet OR characters of the alphabet}*
+        Defining two discreet set of characters from the alphabet that can be repeated between 0 and inf times, and on each iteration, can be chosen from (either one OR the other).
+
+    - AND
+        Indicating a concatenation of the previous character definition and the next.
+
+    - OR
+        Indicating that the previous, and next, set of concatenated character definitions can be accepted.

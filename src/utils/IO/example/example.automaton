@@ -1,0 +1,25 @@
+{
+  "is_deterministic": true,
+
+  "alphabet": ["a", "b"],
+
+  "states": {
+    "0": {
+      "initial": true,
+      "final": false
+    },
+    "1": {
+      "initial": false,
+      "final": true
+    }
+  },
+
+  "transitions": {
+    "0": {
+      "from": "0",
+      "to": "1",
+      "by": ["a"]
+    }
+
+  }
+}
