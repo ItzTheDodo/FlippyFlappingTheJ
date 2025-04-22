@@ -10,7 +10,7 @@ FlippyFlappingTheJ currently only supports Non-Deterministic finite automata (ND
 
 ## Installation<a name="Installation"></a>
 
-FlippyFlappingTheJ runs on <a href="https://www.python.org/downloads/release/python-3120/">Python 3.12</a> and is required.
+FlippyFlappingTheJ requires <a href="https://www.python.org/downloads/release/python-3120/">Python 3.12</a>.
 
 ### Requirements
 * Pillow >= 11
