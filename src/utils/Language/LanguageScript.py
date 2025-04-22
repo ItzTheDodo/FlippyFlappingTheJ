@@ -15,30 +15,30 @@ from src.utils.Language.AutomataLanguage import AutomataLanguage
 
 class LanguageScriptFile:
     """
-        Class used to represent a language script file
+    Class used to represent a language script file
 
-        ...
+    ...
 
-        Attributes
-        ----------
-        path -> str
-            path to the language script file
-        alphabet -> AutomataAlphabet
-            alphabet of the language script file
-        language -> AutomataLanguage
-            language of the language script file
+    Attributes
+    ----------
+    path -> str
+        path to the language script file
+    alphabet -> AutomataAlphabet
+        alphabet of the language script file
+    language -> AutomataLanguage
+        language of the language script file
 
-        Methods
-        -------
-        load_file() -> str
-            loads the contents of the file
-        parse_alphabet(lines: str) -> AutomataAlphabet
-            parses the alphabet from the file
-        parse_language(lines: str) -> AutomataLanguage
-            parses the language from the file
-        parse() -> None
-            parses the alphabet and language from the file
-        """
+    Methods
+    -------
+    load_file() -> str
+        loads the contents of the file
+    parse_alphabet(lines: str) -> AutomataAlphabet
+        parses the alphabet from the file
+    parse_language(lines: str) -> AutomataLanguage
+        parses the language from the file
+    parse() -> None
+        parses the alphabet and language from the file
+    """
 
     def __init__(self, file_path: str):
 
@@ -170,47 +170,3 @@ class LanguageScriptFile:
     @property
     def language(self) -> AutomataLanguage:
         return self._language
-
-
-if __name__ == "__main__":
-    lsf = LanguageScriptFile(r"C:\Users\User\OneDrive\Documents\Applications\FlippyFlappingTheJ\src\utils\Language\example\example_language_file.lsf")
-    # lsf = LanguageScriptFile(r"C:\Users\User\OneDrive\Documents\Applications\FlippyFlappingTheJ\src\utils\Language\example\example2.lsf")
-    print(lsf)
-    print(lsf.alphabet)
-    print(lsf.language)
-    print(lsf.language.automaton_language_to_postfix(str(lsf.language), lsf.alphabet))
-    ndfa = lsf.language.to_non_deterministic_finite_automaton()
-    print(ndfa)
-    # print("------------------------")
-    # print(ndfa.get_transition_table())
-    print("------------------------")
-    dfa = ndfa.to_deterministic()
-    print(dfa)
-    print("------------------------")
-    print(ndfa.run("aaab"))
-    print(ndfa.run("aaabbb"))
-    print(ndfa.run("ab"))
-    print(ndfa.run("aabababaaa"))
-    print(ndfa.run("aaa"))
-    print("------------------------")
-    print(dfa.run("aaab"))
-    print(dfa.run("aaabbb"))
-    print(dfa.run("ab"))
-    print(dfa.run("aabababaaa"))
-    print(dfa.run("aaa"))
-    print("------------------------")
-    # dfa.negate()
-    # print(dfa)
-    # print(dfa.run("aaab"))
-    # print(dfa.run("aaabbb"))
-    # print(dfa.run("ab"))
-    # print(dfa.run("aabababaaa"))
-    # print(dfa.run("aaa"))
-    simplified_dfa = dfa.simplify()
-    print(dfa.simplify())
-    print(simplified_dfa.run("aaab"))
-    print(simplified_dfa.run("aaabbb"))
-    print(simplified_dfa.run("ab"))
-    print(simplified_dfa.run("aabababaaa"))
-    print(simplified_dfa.run("aaa"))
-    ndfa.to_file(r"C:\Users\User\OneDrive\Documents\Applications\FlippyFlappingTheJ\assets\test.automaton")
